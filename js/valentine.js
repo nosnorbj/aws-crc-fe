@@ -3,10 +3,15 @@ const noPhrases = [
   "Are you sure?",
   "Are you positive?",
   "Have you considered this?",
+  "What if you reconsidered?",
   "Let's rethink that...",
   "Maybe give me a chance?",
   "Pretty please?",
-  "I already made plans 😅"
+  "Pretty pretty please?",
+  "We already made plans 😅",
+  "The confetti is already loaded, babe...",
+  "🤬🤬🤬",
+  "I'm gonna pretend I didn't see this."
 ];
 
 const noBtn = document.getElementById("no-btn");
