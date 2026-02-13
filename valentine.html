@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine?</title>
+  <meta name="description" content="A special Valentine's Day invitation." />
+  <link rel="stylesheet" href="css/valentine.css" />
+</head>
+<body>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <main>
+    <section id="proposal" class="card active" aria-live="polite">
+      <p class="eyebrow">for my favorite person</p>
+      <div class="heart-photo-wrap" role="img" aria-label="A heart-shaped photo frame">
+        <img src="images/us.jpeg" alt="Me & Jourdin" class="heart-photo" />
+      </div>
+      <h1>Will you be my Valentine?</h1>
+      <p class="subcopy">Spend the day with me on February 14th.</p>
+      <div class="actions">
+        <button id="yes-btn" class="btn yes">Yes!</button>
+        <button id="no-btn" class="btn no">No.</button>
+      </div>
+    </section>
+
+    <section id="itinerary" class="card" aria-hidden="true">
+      <p class="eyebrow">A Night with Jo(u)rd(a)(i)n</p>
+      <h2>Our February 14th Itinerary</h2>
+      <ul class="timeline">
+        <li>
+          <span class="time">3:00 PM</span>
+          <p>Make homemade pasta with the love of your life, sit back and relax as pasta dinner is made for you.</p>
+        </li>
+        <li>
+          <span class="time">7:00 PM</span>
+          <p>Feel the love with the help of the Orlando Solar Bears and a romantic game of hockey.</p>
+        </li>
+        <li>
+          <span class="time">9:00 PM</span>
+          <p>Perhaps a sweet treat, a night on the town? Ion know twin, we can really get crazy here.</p>
+        </li>
+        <li>
+          <span class="time">11:00 PM or later</span>
+          <p>Lay it down, I know twuntie (twin + auntie) be tired.</p>
+        </li>
+      </ul>
+      <p class="closing">Can't wait to celebrate us ❤️</p>
+    </section>
+  </main>
+ <audio
+    id="bg-music"
+    src="audio/greedy.mp3"
+    preload="auto"
+    loop
+  ></audio>
+  <audio
+    id="yes-sfx"
+    src="audio/hooray.mp3"
+    preload="auto"
+  ></audio>
+
+  <script src="js/valentine.js"></script>
+</body>
+</html>
