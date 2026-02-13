@@ -13,8 +13,45 @@ const noBtn = document.getElementById("no-btn");
 const yesBtn = document.getElementById("yes-btn");
 const proposal = document.getElementById("proposal");
 const itinerary = document.getElementById("itinerary");
+const backgroundMusic = document.getElementById("bg-music");
+const yesSfx = document.getElementById("yes-sfx");
 
 let noIndex = 0;
+let musicStarted = false;
+
+async function tryStartBackgroundMusic() {
+  if (!backgroundMusic || musicStarted) {
+    return;
+  }
+
+  try {
+    await backgroundMusic.play();
+    musicStarted = true;
+  } catch {
+    // Autoplay may be blocked by browser policy until a user gesture occurs.
+  }
+}
+
+function startBackgroundMusicOnGesture() {
+  tryStartBackgroundMusic();
+}
+
+["pointerdown", "keydown"].forEach((eventName) => {
+  window.addEventListener(eventName, startBackgroundMusicOnGesture, { once: true });
+});
+
+tryStartBackgroundMusic();
+
+function playYesSound() {
+  if (!yesSfx) {
+    return;
+  }
+
+  yesSfx.currentTime = 0;
+  yesSfx.play().catch(() => {
+    // If playback is blocked, proceed without interrupting the UX.
+  });
+}
 
 noBtn.addEventListener("click", () => {
   noIndex = (noIndex + 1) % noPhrases.length;
@@ -23,6 +60,7 @@ noBtn.addEventListener("click", () => {
 });
 
 yesBtn.addEventListener("click", () => {
+  playYesSound();
   launchConfetti();
   proposal.classList.remove("active");
   proposal.setAttribute("aria-hidden", "true");
