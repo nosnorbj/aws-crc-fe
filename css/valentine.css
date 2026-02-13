@@ -19,8 +19,11 @@ body {
   color: var(--text);
   background: radial-gradient(circle at top, #22234a, var(--bg) 60%);
   display: grid;
-  place-items: center;
-  overflow: hidden;
+  justify-items: center;
+  align-items: start;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1.25rem 0;
 }
 
 #confetti-canvas {
