@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine?</title>
+  <meta name="description" content="A special Valentine's Day invitation." />
+  <link rel="stylesheet" href="css/valentine.css" />
+</head>
+<body>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <main>
+    <section id="proposal" class="card active" aria-live="polite">
+      <p class="eyebrow">for my favorite person</p>
+      <div class="heart-photo-wrap" role="img" aria-label="A heart-shaped photo frame">
+        <img src="images/me.jpg" alt="Replace with your favorite photo of her" class="heart-photo" />
+      </div>
+      <h1>Will you be my Valentine?</h1>
+      <p class="subcopy">I have something special planned for us on February 14th.</p>
+      <div class="actions">
+        <button id="yes-btn" class="btn yes">Yes!</button>
+        <button id="no-btn" class="btn no">No.</button>
+      </div>
+    </section>
+
+    <section id="itinerary" class="card" aria-hidden="true">
+      <p class="eyebrow">Valentine's Day Plan</p>
+      <h2>Our February 14th Itinerary</h2>
+      <ul class="timeline">
+        <li>
+          <span class="time">6:00 PM</span>
+          <p>Sunset walk + flowers waiting for you.</p>
+        </li>
+        <li>
+          <span class="time">7:00 PM</span>
+          <p>Dinner reservation at your favorite spot.</p>
+        </li>
+        <li>
+          <span class="time">9:00 PM</span>
+          <p>Dessert and stargazing.</p>
+        </li>
+        <li>
+          <span class="time">10:00 PM</span>
+          <p>Cozy movie night and one more surprise.</p>
+        </li>
+      </ul>
+      <p class="closing">Can't wait to celebrate us ❤️</p>
+    </section>
+  </main>
+
+  <script src="js/valentine.js"></script>
+</body>
+</html>
